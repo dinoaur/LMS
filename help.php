@@ -16,7 +16,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </head>
 
 <body style="background-image: url('./res/admin.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="rule-container">
+    <div class="faq-container">
       <h1>Help</h1>
         <h2>Frequently Asked Questions</h2>
         <ul>
