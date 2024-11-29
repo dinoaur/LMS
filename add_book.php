@@ -2,6 +2,7 @@
 include 'header.php';
 include 'db_connection.php';
 
+// Check if user is an Admin or Librarian
 if ($_SESSION['Role'] != 'Admin' && $_SESSION['Role'] != 'Librarian') {
     header("Location: dashboard.php");
     exit;
