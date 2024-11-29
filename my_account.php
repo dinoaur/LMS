@@ -63,7 +63,6 @@ $borrowed_books = $conn->query($sql);
                     <th>Author</th>
                     <th>Borrow Date</th>
                     <th>Due Date</th>
-                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
@@ -75,7 +74,6 @@ $borrowed_books = $conn->query($sql);
                                 <td>" . htmlspecialchars($book['Author']) . "</td>
                                 <td>" . htmlspecialchars($book['BorrowDate']) . "</td>
                                 <td>" . htmlspecialchars($book['DueDate']) . "</td>
-                                <td><a href='my_account.php?return=" . $book['TransactionID'] . "'>Return</a></td>
                               </tr>";
                     }
                 } else {
