@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <head>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
-    <title>User Dashboard</title>
+    <title>Rules</title>
 </head>
 
 <body style="background-image: url('./res/admin.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
