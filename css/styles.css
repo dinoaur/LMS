@@ -1,0 +1,689 @@
+/* General reset for consistent look across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Body styling */
+body {
+    background-image: url('/library.jpg');
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Main container for forms and content */
+.form-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgb(255, 255, 255, );
+    opacity: .8;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #62441a;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu li a {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+    background-color: #c27070d1;
+}
+
+
+/* Dashboard Container */
+.dashboard-container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Dashboard Links */
+.dashboard-container ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.dashboard-container ul li {
+    margin: 10px 0;
+}
+
+.dashboard-container ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #000000;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dashboard-container ul li a:hover {
+    background-color: #ccc26c;
+    color: #fff;
+}
+
+/* Dashboard Logout Link */
+.dashboard-container p a {
+    color: #d9534f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.dashboard-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Message & Role Display */
+.dashboard-container h2 {
+    font-size: 24px;
+    color: #62441a;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.dashboard-container p {
+    font-size: 18px;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Borrow Book Container */
+.borrow-book-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Table styling for Borrow Book page */
+.borrow-book-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.borrow-book-container th,
+.borrow-book-container td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.borrow-book-container th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.borrow-book-container td {
+    color: #555;
+}
+
+.borrow-book-container td a {
+    color: #62441a;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #62441a;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.borrow-book-container td a:hover {
+    background-color: #5c4c36;
+    color: #fff;
+}
+
+/* Available Books Container */
+.available-books-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Table styling for Available Books page */
+.available-books-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.available-books-container th,
+.available-books-container td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.available-books-container th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.available-books-container td {
+    color: #555;
+}
+
+/*My account:User*/
+.my-account-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.my-account-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.my-account-container th,
+.my-account-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.my-account-container th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.my-account-container td {
+    color: #555;
+}
+
+/*Browse books*/
+.browse-books-container {
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.browse-books-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+.browse-books-container th,
+.browse-books-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.browse-books-container th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+.browse-books-container td {
+    color: #555;
+}
+
+.browse-books-container td a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.browse-books-container td a:hover {
+    text-decoration: underline;
+}
+
+/*Reports*/
+/* Reports Container Styling */
+.reports-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reports-container h2,
+.reports-container h3 {
+    color: #333;
+    text-align: center;
+}
+
+.reports-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.reports-container th,
+.reports-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.reports-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/*Catalog*/
+/* Catalog Container Styling */
+.catalog-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-container h2 {
+    color: #333;
+    text-align: center;
+}
+
+.catalog-container table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.catalog-container th,
+.catalog-container td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.catalog-container th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.catalog-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.catalog-container a:hover {
+    text-decoration: underline;
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Labels for input fields */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Select dropdown styling */
+select {
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f9f9f9;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+}
+
+/* Table styling for wider columns */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+    border-spacing: 0;
+    background-color: #fff;
+    table-layout: auto;
+    /* Adjust column width based on content */
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    white-space: normal;
+    /* Allow text to wrap */
+    word-wrap: break-word;
+    /* Break long words */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Allocate more width to title and author columns */
+th.title-col,
+td.title-col {
+    width: 20%;
+    /* Adjust width for titles */
+}
+
+th.author-col,
+td.author-col {
+    width: 20%;
+    /* Adjust width for authors */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+
+    th,
+    td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Admin container styling */
+.admin-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Add Book Form styling */
+.add-book-form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form label and input styling */
+.add-book-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.add-book-form input,
+.add-book-form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.add-book-form button {
+    background-color: #3b391a;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-book-form button:hover {
+    background-color: #b8bfc6;
+}
+
+/* Table styling within admin container */
+.admin-table {
+    width: 100%;
+    table-layout: fixed;
+    /* Ensures consistent column widths */
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+admin-table th,
+.admin-table td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+.admin-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.admin-table td a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.admin-table td a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.add-book-form {
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Genre Filter Container */
+.genre-filter {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/* Genre Button Styles */
+.genre-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #007bff;
+    /* Blue color */
+    color: #fff;
+    /* White text */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover Effect for Genre Buttons */
+.genre-button:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+/* Active Genre Button (Optional) */
+.genre-button.active {
+    background-color: #28a745;
+    /* Green for active button */
+    pointer-events: none;
+    /* Disable click */
+}
+
+/* Popup styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    display: none;
+    /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.popup-content h3 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.popup-content button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
