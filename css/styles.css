@@ -23,7 +23,7 @@ body {
 .form-container {
     width: 400px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(255, 255, 255, );
     opacity: .8;
     border-radius: 10px;
@@ -35,12 +35,12 @@ body {
 /* Navigation bar */
 .navbar {
     background-color: #62441a;
-    padding: 1px;
+    padding-bottom: 25 px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     width: 100%;
     z-index: 10;
@@ -49,6 +49,7 @@ body {
 .navbar-container {
     display: flex;
     align-items: center;
+    padding: 11px;
     justify-content: space-between;
     max-width: 1200px;
     width: 100%;
@@ -56,7 +57,7 @@ body {
 
 .navbar-logo {
     color: white;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: 600;
     text-decoration: none;
 }
@@ -73,7 +74,7 @@ body {
 
 .navbar-menu li a {
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     padding: 8px 16px;
     border-radius: 5px;
@@ -90,7 +91,7 @@ body {
     width: 400px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #62441a;
     opacity: 80%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -105,23 +106,28 @@ body {
 }
 
 .dashboard-container ul li {
-    margin: 10px 0;
+    display: inline-block;
+    width: 200px; /* Set a fixed width for all items */
+    text-align: center; /* Center-align the text within the block */
 }
 
 .dashboard-container ul li a {
-    display: inline-block;
+    display: block; /* Make <a> fill the parent <li> */
     padding: 10px 20px;
+    margin: 5px;
     color: #000000;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%; /* Ensure <a> fills the width of the parent <li> */
+    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
+
 .dashboard-container ul li a:hover {
-    background-color: #ccc26c;
-    color: #fff;
+    background-color: #faec9d;
 }
 
 /* Dashboard Logout Link */
@@ -136,16 +142,16 @@ body {
 }
 
 /* Welcome Message & Role Display */
-.dashboard-container h2 {
-    font-size: 24px;
-    color: #62441a;
+.dashboard-container h1 {
+    /* font-size: 24px; */
+    color: #f5d4b5;
     margin-bottom: 10px;
     font-weight: 500;
 }
 
 .dashboard-container p {
     font-size: 18px;
-    color: #555;
+    color: #f5d4b5;
     font-weight: 400;
 }
 
