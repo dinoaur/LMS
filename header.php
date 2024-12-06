@@ -30,14 +30,14 @@ if (session_status() === PHP_SESSION_NONE) {
 
                 
                     <?php elseif ($_SESSION['Role'] == 'User'): ?>
-                        <li><a href="help.php">FAQs</a></li>
+
                         <li><a href="rules.php">Rules</a></li>
                         <li><a href="browse_books.php">Browse Books</a></li>
                         <li><a href="my_account.php">My Account</a></li>
+                        <li><a href="help.php">FAQs</a></li>
                     <?php endif; ?>
                     <li><a href="logout.php">Logout</a></li>
                 <?php else: ?>
-                    <li><a href="register.php">Register</a></li>
                     <li><a href="index.php">Login</a></li>
                 <?php endif; ?>
             </ul>

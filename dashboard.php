@@ -17,8 +17,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <body style="background-image: url('./res/admin.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="dashboard-container">
-        <h2>Welcome, <?php echo $_SESSION['Name']; ?>!</h2>
-        <p>Your role: <?php echo $_SESSION['Role']; ?></p>
+        <h1>Welcome, <?php echo $_SESSION['Name']; ?>!</h1>
 
         <ul>
             <?php if ($_SESSION['Role'] == 'Admin') { ?>
@@ -27,11 +26,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
                 <li><a href="manage_users.php">Manage Users</a></li>
                 <li><a href="manage_books.php">Manage Books</a></li>
             <?php } ?>
-            <li><a href="borrow_book.php">Borrow a Book</a></li>
+            <li><a href="borrow_book.php">Return a Book</a></li>
             <li><a href="view_books.php">View Available Books</a></li>
         </ul>
 
-        <p><a href="logout.php">Logout</a></p>
     </div>
 </body>
 
