@@ -17,6 +17,21 @@ body {
     font-size: 18px;
     line-height: 1.7;
 }
+.rule-container{
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    opacity: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
 /* Main container for forms and content */
