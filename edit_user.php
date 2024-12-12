@@ -30,12 +30,13 @@ if (isset($_GET['user_id'])) {
 // Handle form submission for editing the user
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $conn->real_escape_string($_POST['name']);
+    $role = $conn->real_escape_string($_POST['role']);
     $password = isset($_POST['password']) && !empty($_POST['password']) 
                 ? password_hash($_POST['password'], PASSWORD_DEFAULT) 
                 : null;
 
     // Update query
-    $sql = "UPDATE users SET Name = '$name'";
+    $sql = "UPDATE users SET Name = '$name', Role = '$role'";
     if ($password) {
         $sql .= ", Password = '$password'";
     }
@@ -73,7 +74,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <div class="form-group">
                 <label for="role">Role:</label>
-                <input type="text" id="role" name="role" value="<?php echo htmlspecialchars($user['Role']); ?>" readonly>
+                <select id="role" name="role" required>
+                    <option value="Admin" <?php echo $user['Role'] == 'Admin' ? 'selected' : ''; ?>>Admin</option>
+                    <option value="User" <?php echo $user['Role'] == 'User' ? 'selected' : ''; ?>>User</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="password">New Password (leave blank to keep current):</label>
