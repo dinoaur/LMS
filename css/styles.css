@@ -31,6 +31,8 @@ body {
     max-width: 900px;
     width: 100%;
     box-sizing: border-box;
+} .rule-container li {
+    list-style-type: none;
 }
 
 
